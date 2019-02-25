@@ -13,6 +13,9 @@ spring:
     port: 5672
     username: guest
     password: guest  
+  redis:
+    host: 10.222.38.149
+    port: 6379    
 
 # F 版本是默认不开启的， 需要手动开启。  
 feign:
