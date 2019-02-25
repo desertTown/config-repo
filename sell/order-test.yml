@@ -8,6 +8,11 @@ spring:
     show-sql: true
   application:
     name: order
+  rabbitmq:
+    host: 10.222.38.149
+    port: 5672
+    username: guest
+    password: guest  
 
 # F 版本是默认不开启的， 需要手动开启。  
 feign:
