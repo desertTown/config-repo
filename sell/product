@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost/springcloud_sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  application:
+    name: product
+  rabbitmq:
+    host: 10.222.38.149
+    port: 5672
+    username: guest
+    password: guest
+  
+# F 版本是默认不开启的， 需要手动开启。  
+feign:
+  hystrix:
+    enabled: true:
+
+env:
+  dev
