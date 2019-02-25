@@ -17,7 +17,7 @@ spring:
 # F 版本是默认不开启的， 需要手动开启。  
 feign:
   hystrix:
-    enabled: true:
+    enabled: true
 
 env:
   test
