@@ -1,12 +1,28 @@
+spring:
+  application:
+    name: api_gateway
+  rabbitmq:
+    host: 10.222.38.149
+    port: 5672
+    username: guest
+    password: guest     
 zuul:
+  #全部服务忽略敏感头(全部服务都可以传递cookie)
+  sensitive-headers: 
   routes:
-    myProduct:
+  # /myProduct/product/list -> /product/product/list
+    aaaaaa:
       path: /myProduct/**
       serviceId: product
-      #zuul默认会过滤掉cookie相关信息， 如果现在其他服务中传递， 将这个属性设置为空即可
       sensitiveHeaders:
-    #简洁写法
+  #简洁写法
 #    product: /myProduct/**
-  # 禁止某些接口被外界直接访问
-#  ignored-patterns:
-#    - /**/product/list
+  #排除某些路由
+  ignored-patterns:
+    - /**/product/listForOrders
+management:
+  security:
+    enabled: false    
+ribbon:
+  ReadTimeout: 5000
+  SocketTimeout: 5000
