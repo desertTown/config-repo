@@ -5,7 +5,10 @@ spring:
     host: 10.222.38.149
     port: 5672
     username: guest
-    password: guest     
+    password: guest
+  redis:
+    host: 10.222.38.149
+    port: 6379        
 zuul:
   #全部服务忽略敏感头(全部服务都可以传递cookie)
   sensitive-headers: 
