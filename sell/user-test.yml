@@ -7,7 +7,7 @@ spring:
   jpa:
     show-sql: true
   redis:
-    host: 192.168.50.2
+    host: 192.168.50.92
     port: 6379    
 
 # F 版本是默认不开启的， 需要手动开启。  
